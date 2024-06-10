@@ -69,16 +69,16 @@ window.addEventListener("load", () => {
     updateExchangeRate();
 })
 
-// btn2.addEventListener("click",(evt) => {
-//     evt.preventDefault();
-//     let temp;
-//     if(select.name === "from"){
-//         temp = currCode;
-//         currCode = to.currCode;
-//         console.log(currCode);
-//         newOption.selected = "selected";
-//     } else if(select.name === "to") {
-//         newOption.selected = "selected";
-//     }
-// })
 
+btn2.addEventListener("click",(evt) => {
+    evt.preventDefault();
+    let temp;
+    if(select.name === "from"){
+        temp = currCode;
+        currCode = to.currCode;
+        console.log(currCode);
+        newOption.selected = "selected";
+    } else if(select.name === "to") {
+        newOption.selected = "selected";
+    }
+})
