@@ -69,7 +69,6 @@ window.addEventListener("load", () => {
     updateExchangeRate();
 })
 
-
 btn2.addEventListener("click",(evt) => {
     evt.preventDefault();
     let temp;
