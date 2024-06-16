@@ -1,7 +1,7 @@
 const Base_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
 
 const dropdown = document.querySelectorAll(".dropdown select");
-const btn = document.querySelector("form button");
+const btn = document.querySelector("#submit");
 const btn2 = document.querySelector('#Exc')
 const fromCurr = document.querySelector(".from select");
 const toCurr = document.querySelector(".to select");
@@ -59,25 +59,15 @@ btn.addEventListener ("click",(evt) => {
 })
 
 
-btn2.addEventListener("click",(evt) => {
-    evt.preventDefault();
-    
-})
-
-
 window.addEventListener("load", () => {
     updateExchangeRate();
 })
 
 btn2.addEventListener("click",(evt) => {
     evt.preventDefault();
-    let temp;
-    if(select.name === "from"){
-        temp = currCode;
-        currCode = to.currCode;
-        console.log(currCode);
-        newOption.selected = "selected";
-    } else if(select.name === "to") {
-        newOption.selected = "selected";
-    }
+    let temp = fromCurr.value;
+    fromCurr.value = toCurr.value;
+    toCurr.value = temp;
+    updateFlag(fromCurr);
+    updateFlag(toCurr);
 })
