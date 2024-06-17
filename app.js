@@ -55,17 +55,27 @@ const updateFlag = (element) =>  {
 btn.addEventListener ("click",(evt) => {
     evt.preventDefault();
     updateExchangeRate();
+})
+
+btn2.addEventListener ("click",(evt) => {
+    evt.preventDefault();
+    swapButton();
+})
 
 
 window.addEventListener("load", () => {
     updateExchangeRate();
 })
 
-btn2.addEventListener("click",(evt) => {
-    evt.preventDefault();
-    let temp = fromCurr.value;
-    fromCurr.value = toCurr.value;
-    toCurr.value = temp;
-    updateFlag(fromCurr);
-    updateFlag(toCurr);
-})
+
+
+const swapButton = () => {
+    
+        let temp = fromCurr.value;
+        fromCurr.value = toCurr.value;
+        toCurr.value = temp;
+        updateFlag(fromCurr);
+        updateFlag(toCurr);
+    }
+
+    

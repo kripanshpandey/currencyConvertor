@@ -66,6 +66,8 @@ form input{
 
 .msg {
     margin: 2rem 0 2rem 0;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 form button{
@@ -93,6 +95,7 @@ form button{
     align-items: center;
 }
 
+#Exc:hover {background-color: #3e8e41}
 
 #Exc:active {
     background-color: #3e8e41;
